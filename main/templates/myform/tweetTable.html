@@ -1,0 +1,38 @@
+{% extends 'myform/base.html' %}
+
+{% block title %}
+Tweet Retrieval
+{% endblock %}
+
+{% block content %}
+<div class = "col-6 my-5">
+<label for="tweet">Twitter Thread:</label>
+<input type="text" id="tweet" name="tweet">
+<input type="submit" value="Submit">
+</div>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Selected</th>
+        <th>Twitter User</th>
+		<th>Tweets</th>    
+        <th>Category</th>
+        <th>Bio</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for tweet in t%}  
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>{{tweet.twitterUser}}</td>
+            <td>{{tweet.tweet}}</td>
+            <td>{{tweet.category}}</td>
+	    {% endfor %}
+        </tr>
+	</tbody>
+</table>
+<div>
+    <a class="btn btn-primary" href="/home">Back to home</a>
+    <input type="submit" value="Analyse Data">
+</div>
+{% endblock %}

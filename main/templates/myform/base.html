@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Twitter Hate Detection{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row" style="background-color:#94baf2"><br></div>
+			<div class="row" style="background-color:#bcd2f4">
+				<div class="col-sm-4">
+					<table style="border-collapse: separate; border-spacing: 15px;">
+						<td><h3>Home</h3></td> 
+						<td><h3>Create</h3></td>
+						<td><h3>View</h3></td>
+						<td><h3>Dictionary</h3></td>
+						<td><h3>Request</h3></td>
+                        <td><h3>Data</h3></td>
+					</table>
+				</div>
+                <div class="col-sm-7"></div>
+                <div class="col-sm-1">
+                    <table style="border-collapse: separate; border-spacing: 15px;">
+                        <td><button type='submit' class="btn btn-primary">Logout</button></td>
+                    </table>
+                </div>
+			</div>
+	{% block content %}
+	{% endblock %}
+    </div>
+
+</body>
+</html>
+
+
